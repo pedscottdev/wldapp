@@ -1,4 +1,6 @@
-<title>Volt Laravel Dashboard - Buttons</title>
+@extends('layouts.app')
+@section('content')
+<title>Library Buttons</title>
 <div class="py-4">
     <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
         <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
@@ -249,3 +251,4 @@
         </div>
     </div>
 </div>
+@endsection

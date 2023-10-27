@@ -1,4 +1,6 @@
-<title>Volt Laravel Dashboard - Typography</title>
+@extends('layouts.app')
+@section('content')
+<title>Library - Typography</title>
 <div class="py-4">
     <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
         <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
@@ -193,3 +195,4 @@
         </div>
     </div>
 </div>
+@endsection

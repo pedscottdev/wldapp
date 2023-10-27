@@ -1,4 +1,6 @@
-<title>User Management</title>
+@extends('layouts.app')
+@section('content')
+<title>Quản lý người dùng</title>
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
     <div class="d-block mb-4 mb-md-0">
         <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
@@ -13,26 +15,21 @@
                         </svg>
                     </a>
                 </li>
-                <li class="breadcrumb-item"><a href="#">Volt</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Users List</li>
+                <!-- <li class="breadcrumb-item"><a href="#">Volt</a></li> -->
+                <li class="breadcrumb-item active" aria-current="page">Quản lý người dùng</li>
             </ol>
         </nav>
-        <h2 class="h4">Users List</h2>
-        <p class="mb-0">Your web analytics dashboard template.</p>
+        <h2 class="h4 page-title">Danh sách người dùng</h2>
     </div>
     <div class="btn-toolbar mb-2 mb-md-0">
-        <a href="#" class="btn btn-sm btn-gray-800 d-inline-flex align-items-center">
+        <a href="/users/create" class="btn btn-sm btn-gray-800 d-inline-flex align-items-center">
             <svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6">
                 </path>
             </svg>
-            New User
+            Tạo mới
         </a>
-        <div class="btn-group ms-2 ms-lg-3">
-            <button type="button" class="btn btn-sm btn-outline-gray-600">Share</button>
-            <button type="button" class="btn btn-sm btn-outline-gray-600">Export</button>
-        </div>
     </div>
 </div>
 <div class="table-settings mb-4">
@@ -47,14 +44,13 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </span>
-                <input type="text" class="form-control" placeholder="Search users">
+                <input type="text" class="form-control" placeholder="Tìm kiếm người dùng">
             </div>
             <select class="form-select fmxw-200 d-none d-md-inline" aria-label="Message select example 2">
-                <option selected>All</option>
-                <option value="1">Active</option>
-                <option value="2">Inactive</option>
-                <option value="3">Pending</option>
-                <option value="3">Cancelled</option>
+                <option selected>Tất cả</option>
+                <option value="1">Đang hoạt động</option>
+                <option value="2">Không hoạt động</option>
+                <option value="3">Bị chặn</option>
             </select>
         </div>
         <div class="col-3 col-lg-4 d-flex justify-content-end">
@@ -111,12 +107,8 @@
         </div>
     </div>
 </div>
-<div class="alert alert-danger" role="alert">
-    Add, Edit, Delete features are not functional. This is a PRO feature! Click <a
-        href="https://volt-pro-laravel-admin-dashboard.updivision.com/" target="_blank">here</a> to see the PRO product.
-</div>
 <div class="card card-body shadow border-0 table-wrapper table-responsive">
-    <div class="d-flex mb-3">
+    <!-- <div class="d-flex mb-3">
         <select class="form-select fmxw-200" aria-label="Message select example">
             <option selected>Bulk Action</option>
             <option value="1">Send Email</option>
@@ -124,7 +116,7 @@
             <option value="3">Delete User</option>
         </select>
         <button class="btn btn-sm px-3 btn-secondary ms-3">Apply</button>
-    </div>
+    </div> -->
     <table class="table user-table table-hover align-items-center">
         <thead>
             <tr>
@@ -157,13 +149,13 @@
                             alt="Avatar">
                         <div class="d-block">
                             <span class="fw-bold">Admin</span>
-                            <div class="small text-gray">admin@volt.com</div>
+                            <div class="small text-gray">phuoc.nguyen@vn.gt.com</div>
                         </div>
                     </a>
                 </td>
                 <td><span class="fw-normal">Admin</span></td>
                 <td><span class="fw-normal d-flex align-items-center">15 Jun 2021</span></td>
-                <td><span class="fw-normal text-success">Active</span></td>
+                <td><span class="fw-normal text-success">Đang hoạt động</span></td>
                 <td>
                     <div class="btn-group">
                         <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0"
@@ -179,11 +171,11 @@
                         <div class="dropdown-menu dashboard-dropdown dropdown-menu-start mt-2 py-1">
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <span class="fas fa-user-shield me-2"></span>
-                                View Details
+                                Xem chi tiết
                             </a>
                             <a class="dropdown-item text-danger d-flex align-items-center" href="#">
                                 <span class="fas fa-user-times me-2"></span>
-                                Delete user
+                                Xóa người dùng
                             </a>
                         </div>
                     </div>
@@ -192,3 +184,4 @@
         </tbody>
     </table>
 </div>
+@endsection

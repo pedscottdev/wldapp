@@ -21,14 +21,11 @@ use App\Http\Livewire\LoginExample;
 use App\Http\Livewire\ProfileExample;
 use App\Http\Livewire\RegisterExample;
 use App\Http\Livewire\Transactions;
-use App\Http\Livewire\Page1;
-use App\Http\Livewire\Page2;
-use App\Http\Livewire\Page3;
-use App\Http\Livewire\Page4;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\ResetPasswordExample;
 use App\Http\Livewire\UpgradeToPro;
-use App\Http\Livewire\Users;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\WoodworkingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,17 +51,13 @@ Route::get('/reset-password/{id}', ResetPassword::class)->name('reset-password')
 Route::middleware('auth')->group(function () {
     Route::get('/profile', Profile::class)->name('profile');
     Route::get('/profile-example', ProfileExample::class)->name('profile-example');
-    Route::get('/users', Users::class)->name('users');
+
     Route::get('/login-example', LoginExample::class)->name('login-example');
     Route::get('/register-example', RegisterExample::class)->name('register-example');
     Route::get('/forgot-password-example', ForgotPasswordExample::class)->name('forgot-password-example');
     Route::get('/reset-password-example', ResetPasswordExample::class)->name('reset-password-example');
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
     Route::get('/transactions', Transactions::class)->name('transactions');
-    Route::get('/page1', Page1::class)->name('page1');
-    Route::get('/page2', Page2::class)->name('page2');
-    Route::get('/page3', Page3::class)->name('page3');
-    Route::get('/page4', Page4::class)->name('page4');
     Route::get('/bootstrap-tables', BootstrapTables::class)->name('bootstrap-tables');
     Route::get('/lock', Lock::class)->name('lock');
     Route::get('/buttons', Buttons::class)->name('buttons');
@@ -72,4 +65,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/forms', Forms::class)->name('forms');
     Route::get('/modals', Modals::class)->name('modals');
     Route::get('/typography', Typography::class)->name('typography');
+
+    // Users
+    Route::get('/users', [UsersController::class, 'view'])->name('users');
+    Route::get('/users/create', [UsersController::class, 'create'])->name('users-create');
+
+    // Woodworking
+    Route::get('/woodworking', [WoodworkingController::class, 'view'])->name('woodworking');
+    Route::get('/woodworking/wood-sorting', [WoodworkingController::class, 'sort'])->name('woodworking-sort');
+    Route::get('/woodworking/create-drying-kiln', [WoodworkingController::class, 'create'])->name('woodworking-create');
+    Route::get('/woodworking/load-into-kiln', [WoodworkingController::class, 'load'])->name('woodworking-load');
+    Route::get('/woodworking/qc-check', [WoodworkingController::class, 'check'])->name('woodworking-check');
 });

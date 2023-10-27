@@ -65,61 +65,19 @@
               <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
               <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
             </svg></span></span>
-          <span class="sidebar-text">Dashboard</span>
+          <span class="sidebar-text">Trang chủ</span>
         </a>
       </li>
       <li class="nav-item {{ Request::segment(1) == 'transactions' ? 'active' : '' }}">
         <a href="/transactions" class="nav-link">
-          <span class="sidebar-icon"><i class="fas fa-briefcase icon icon-xs custom-icon"></i></span>
-          <span class="sidebar-text">Workspace</span>
+          <span class="sidebar-icon"><i class="fas fa-cube custom-icon"></i></span>
+          <span class="sidebar-text">Chế biến gỗ</span>
         </a>
       </li>
-      <li class="nav-item {{ Request::segment(1) == 'page1' ? 'active' : '' }}">
-        <a href="/page1" class="nav-link">
-          <span class="sidebar-icon"><svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path>
-              <path fill-rule="evenodd"
-                d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                clip-rule="evenodd"></path>
-            </svg></span>
-          <span class="sidebar-text">Tạo lò</span>
-        </a>
-      </li>
-      <li class="nav-item {{ Request::segment(1) == 'page2' ? 'active' : '' }}">
-        <a href="/page2" class="nav-link">
-          <span class="sidebar-icon"><svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path>
-              <path fill-rule="evenodd"
-                d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                clip-rule="evenodd"></path>
-            </svg></span>
-          <span class="sidebar-text">Chạy lò</span>
-        </a>
-      </li>
-      <li class="nav-item {{ Request::segment(1) == 'page3' ? 'active' : '' }}">
-        <a href="/page3" class="nav-link">
-          <span class="sidebar-icon"><svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path>
-              <path fill-rule="evenodd"
-                d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                clip-rule="evenodd"></path>
-            </svg></span>
-          <span class="sidebar-text">Xuất lò</span>
-        </a>
-      </li>
-      <li class="nav-item {{ Request::segment(1) == 'page4' ? 'active' : '' }}">
-        <a href="/page4" class="nav-link">
-          <span class="sidebar-icon"><svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path>
-              <path fill-rule="evenodd"
-                d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                clip-rule="evenodd"></path>
-            </svg></span>
-          <span class="sidebar-text">Nhập kho</span>
+      <li class="nav-item {{ Request::segment(1) == 'woodworking' ? 'active' : '' }}">
+        <a href="/woodworking" class="nav-link">
+          <span class="sidebar-icon"><svg class="icon icon-xs me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.3rem;"><path d="M4 22h16a1 1 0 0 0 1-1V5c0-1.654-1.346-3-3-3H6C4.346 2 3 3.346 3 5v16a1 1 0 0 0 1 1zM18 3.924a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-3 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-3 3.117c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path><path d="M9.32 12.265c-.415.384-1.041.964-1.041 2.067 0 1.104.626 1.684 1.041 2.068.352.325.4.398.4.6h2c0-1.104-.626-1.684-1.041-2.068-.352-.325-.4-.398-.4-.6s.048-.275.4-.6c.414-.384 1.041-.964 1.041-2.068 0-1.103-.626-1.683-1.041-2.066-.351-.325-.399-.397-.399-.598h-2c0 1.104.627 1.683 1.042 2.066.351.324.399.396.399.597-.001.203-.05.276-.401.602zm4 0c-.414.384-1.04.964-1.04 2.067s.626 1.684 1.04 2.067c.351.325.399.398.399.601h2c0-1.104-.626-1.684-1.04-2.067-.351-.325-.399-.398-.399-.601s.049-.275.399-.601c.414-.384 1.04-.964 1.04-2.068 0-1.103-.626-1.682-1.04-2.065-.35-.324-.399-.397-.399-.598h-2c0 1.103.626 1.683 1.041 2.066.35.324.398.397.398.598.001.202-.048.275-.399.601z"></path></svg></span>
+          <span class="sidebar-text">Quản lý sấy gỗ</span>
         </a>
       </li>
       <li class="nav-item">
@@ -262,10 +220,17 @@
       </li>
       <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
       <li class="nav-item">
-        <a href="/profile" target="_blank" class="nav-link d-flex align-items-center">
+        <a href="/users" class="nav-link d-flex align-items-center">
+          <span class="sidebar-icon me-2 custom-icon"><i class="fas fa-user-circle"></i></i>
+          </span>
+          <span class="sidebar-text">Quản lý người dùng</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/profile" class="nav-link d-flex align-items-center">
           <span class="sidebar-icon me-2 custom-icon"><i class="fas fa-cog"></i>
           </span>
-          <span class="sidebar-text">Setting</span>
+          <span class="sidebar-text">Cài đặt</span>
         </a>
       </li>
     </ul>

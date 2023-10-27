@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <title>Tables</title>
 <div class="py-4">
     <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
@@ -450,4 +452,5 @@
             </table>
         </div>
     </div>
-</div>
+</div>  
+@endsection

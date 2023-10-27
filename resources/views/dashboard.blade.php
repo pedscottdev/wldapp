@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <title>Dashboard</title>
 <div class="py-4">
     <div class="dropdown">
@@ -565,4 +567,5 @@
             </div>
         </div>
     </div>
-</div>
+</div>  
+@endsection
